@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
+// Route::get('/', function () {
+//     return view('layouts.app');
+// });
+
+Route::view('/', 'pages.frontend.index');
+Route::view('/login', 'pages.auth.login');
+Route::view('/register', 'pages.auth.register');
 
 Route::get('admin/loker', 'Admin\LokerController@index')->name('admin.loker.index');
 Route::get('admin/datapelamar', 'Admin\DataPelamarController@index')->name('admin.data_pelamar.index');
