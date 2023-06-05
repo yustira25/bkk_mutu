@@ -28,8 +28,8 @@
                                         <img src="img/author-nav.jpg" alt="" class="rounded-circle">
                                     </div> --}}
                                     <div>
-                                        <h6>Rabbi Islam Rony</h6>
-                                        <span>UI Designer</span>
+                                        <h6>{{ auth()->user()->name }}</h6>
+                                        {{-- <span>UI Designer</span> --}}
                                     </div>
                                 </div>
                                 <div class="nav-author__options">
@@ -56,7 +56,7 @@
                                                 <i class="uil uil-bell"></i> Help</a>
                                         </li>
                                     </ul> --}}
-                                    <a href="#" class="nav-author__signout">
+                                    <a href="{{ route('logout') }}" class="nav-author__signout">
                                         <i class="uil uil-sign-out-alt"></i> Sign Out</a>
                                 </div>
                             </div>

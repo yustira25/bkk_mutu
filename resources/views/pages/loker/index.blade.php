@@ -64,7 +64,7 @@
                                     <tr>
                                         <td>{{ $loker->id }}</td>
                                         <td>{{ $loker->title }}</td>
-                                        <td>{{ $loker->qualification }}</td>
+                                        <td>{!! $loker->qualification !!}</td>
                                         <td>{{ $loker->file_id }}</td>
                                         <td>{{ $loker->regist_date }}</td>
                                         <td>{{ $loker->regist_end_date }}</td>
@@ -72,7 +72,7 @@
                                         <td>
                                             <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
                                                 {{-- <li>
-                                                    <a href="#" class="view">view
+                                                    <a href="#" class="view">view$loker->qualification
                                                         <i class="uil uil-setting"></i>
                                                     </a>
                                                 </li> --}}

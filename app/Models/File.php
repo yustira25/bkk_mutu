@@ -4,9 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class File extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
     protected $guarded = [];
+    protected $data = 'file'; // nama tabel pada database
+
+    public function loker()
+    {
+        return $this->belongsTo(Loker::class, 'filepath', 'id');
+    }
 }

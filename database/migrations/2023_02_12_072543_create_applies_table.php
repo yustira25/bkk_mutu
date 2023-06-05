@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->foreignId('loker_id');
             $table->string('status');
-            $table->string('alasan_ditolak');
+            $table->string('alasan_ditolak')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

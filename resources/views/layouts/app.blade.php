@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="{{ asset('admin_assets/css/plugin.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin_assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin_assets/lib/summernote-0.8.18-dist/summernote.css') }}">
 
     {{-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png"> --}}
 
@@ -55,6 +56,9 @@
 
     <script src="{{ asset('admin_assets/js/plugins.min.js') }}"></script>
     <script src="{{ asset('admin_assets/js/script.min.js') }}"></script>
+    <script src="{{ asset('admin_assets/lib/summernote-0.8.18-dist/summernote.js') }}"></script>
+
+    @stack('scripts')
 
 </body>
 

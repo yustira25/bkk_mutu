@@ -4,20 +4,22 @@
         
         
         <meta charset="utf-8" />
-        <title>Home | Jobcy - Job Listing Template | Themesdesign</title>
+        <title>BKK SMK MUTU</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content=" " />
         <meta name="keywords" content="" />
         <meta content="Themesdesign" name="author" />
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+        {{-- <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}"> --}}
 
         <!-- Choise Css -->
         <link rel="stylesheet" href="{{ asset('assets/libs/choices.js/public/assets/styles/choices.min.css') }}">
 
         <!-- Swiper Css -->
         <link rel="stylesheet" href="{{ asset('assets/libs/swiper/swiper-bundle.min.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('assets/icons/v3.0.0/css/line.css') }}">
 
         <!-- Bootstrap Css -->
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -30,6 +32,8 @@
     </head>
 
     <body>
+        @include('sweetalert::alert')
+
          <!--start page Loader -->
          {{-- <div id="preloader">
             <div id="status">

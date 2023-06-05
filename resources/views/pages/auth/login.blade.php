@@ -11,11 +11,12 @@
                             <div class="col-lg-6 text-center">
                                 <div class="card-body p-4">
                                     <a href="index.html">
-                                        <img src="assets/images/logo-light.png" alt="" class="logo-light">
-                                        <img src="assets/images/logo-dark.png" alt="" class="logo-dark">
+                                        <img src="{{ asset('assets/images/logosmkmutu.jpg') }}" width="50" height="50" alt=""> BKK SMK MUTU
+                                        {{-- <img src="assets/images/logo-light.png" alt="" class="logo-light">
+                                        <img src="assets/images/logo-dark.png" alt="" class="logo-dark"> --}}
                                     </a>
                                     <div class="mt-5">
-                                        <img src="assets/images/auth/sign-in.png" alt="" class="img-fluid">
+                                        <img src="{{ asset('assets/images/auth/sign-in.png') }}" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div><!--end col-->
@@ -24,29 +25,31 @@
                                     <div class="w-100">
                                         <div class="text-center mb-4">
                                             <h5>Welcome Back !</h5>
-                                            <p class="text-white-70">Sign in to continue to Jobcy.</p>
+                                            <p class="text-white-70">Log in to continue to BKK Mutu</p>
                                         </div>
-                                        <form action="https://themesdesign.in/jobcy/layout/index.html" class="auth-form">
+                                        <form action="{{ route('login') }}" method="POST" class="auth-form">
+                                            {{ csrf_field() }}
+
                                             <div class="mb-3">
-                                                <label for="usernameInput" class="form-label">Username</label>
-                                                <input type="text" class="form-control" id="usernameInput" placeholder="Enter your username" required>
+                                                <label for="email" class="form-label">Email</label>
+                                                <input type="text" name="email" class="form-control" id="email" placeholder="Masukan email anda" autofocus required>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="passwordInput" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="passwordInput" placeholder="Enter your password" required>
+                                                <label for="password" class="form-label">Password</label>
+                                                <input type="password" name="password" class="form-control" id="password" placeholder="Masukan password anda" required>
                                             </div>
                                             <div class="mb-4">
-                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="flexCheckDefault">
-                                                    <a href="reset-password.html" class="float-end text-white">Forgot Password?</a>
-                                                    <label class="form-check-label" for="flexCheckDefault">Remember me</label>
+                                                {{-- <div class="form-check"><input class="form-check-input" type="checkbox" id="flexCheckDefault"> --}}
+                                                    {{-- <a href="reset-password.html" class="float-end text-white">Forgot Password?</a>
+                                                    <label class="form-check-label" for="flexCheckDefault">Remember me</label> --}}
                                                 </div>
                                             </div>
                                             <div class="text-center">
-                                                <button type="submit" class="btn btn-white btn-hover w-100">Sign In</button>
+                                                <button type="submit" class="btn btn-white btn-hover w-100">Log In</button>
                                             </div>
                                         </form>
                                         <div class="mt-4 text-center">
-                                            <p class="mb-0">Don't have an account ? <a href="sign-up.html" class="fw-medium text-white text-decoration-underline"> Sign Up </a></p>
+                                            <p class="mb-0">Belum punya akun ? <a href="{{ route('register') }}" class="fw-medium text-white text-decoration-underline"> Register </a></p>
                                         </div>
                                     </div>
                                 </div>

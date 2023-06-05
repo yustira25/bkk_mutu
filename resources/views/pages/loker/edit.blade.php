@@ -25,7 +25,7 @@
                                     <div class="dm-upload__button">
                                         <a href="javascript:void(0)" class="btn btn-lg btn-outline-lighten btn-upload"
                                             name="file_id" onclick="$('#file').click()">
-                                            {{-- <img class="svg" src="img/svg/paperclip.svg" alt="paperclip">  --}} Browse</a>
+                                            <img class="svg" src="{{ asset('admin_assets/img/svg/paperclip.svg') }}" alt="paperclip">  Browse</a>
                                         <input type="file" name="file" class="upload-one" id="file">
                                     </div>
                                     <div class="dm-upload__file">

@@ -16,7 +16,7 @@
                         </div>
                         <div class="form-group">
                             <label>Kualifikasi</label>
-                            <textarea class="form-control" name="qualification" rows="3" placeholder="Tentang Loker"></textarea>
+                            <textarea id="qualification" class="form-control" name="qualification" rows="3" placeholder="Tentang Loker"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Upload File Loker</label>
@@ -66,4 +66,16 @@
                             <button class="btn btn-primary btn-default btn-squared" type="submit">Submit Loker</button>
                         </div>
                     </form>
-                @endsection
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('#qualification').summernote();
+        });
+    </script>
+@endpush

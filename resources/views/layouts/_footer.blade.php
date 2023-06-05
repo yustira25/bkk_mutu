@@ -18,7 +18,7 @@
                                 <a href="#">Team</a>
                             </li> --}}
                             <li>
-                                <img src="{{ asset('admin_assets/img/stmik-tegal.png') }}" width="40" height="40"><a href="#"> STMIK TEGAL</a>
+                                <img src="{{ asset('admin_assets/img/stmik-tegal.png') }}" width="40" height="40"><a href="https://stmik-tegal.ac.id/"> STMIK TEGAL</a>
                             </li>
                         </ul>
                     </div>

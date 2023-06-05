@@ -9,11 +9,14 @@ class FileHelper
 {
     public static function upload($file)
     {
-        $path = public_path() . '/uploads';
-        File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
+        $path = 'uploads/';
+        $fullpath = public_path() . $path;
+        File::isDirectory($fullpath) or File::makeDirectory($fullpath, 0777, true, true);
 
         $ext = $file->extension();
-        $filename = time() . '.' . $ext;
+        // $filename = time() . '.' . $ext;
+        $filename = md5(uniqid(rand(), true).time()).'.'.$ext;
+
         $data = [
 
             'original_name' => $file->getClientOriginalName(),
@@ -27,6 +30,7 @@ class FileHelper
 
 
         $f = ModelsFile::create($data);
+        $file->move($path, $filename);
         return $f->id;
     }
 }

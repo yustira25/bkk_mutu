@@ -22,6 +22,8 @@
         <!-- Swiper Css -->
         <link rel="stylesheet" href="{{ asset('assets/libs/swiper/swiper-bundle.min.css') }}">
 
+        <link rel="stylesheet" href="{{ asset('assets/icons/v3.0.0/css/line.css') }}">
+
         <!-- Bootstrap Css -->
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->

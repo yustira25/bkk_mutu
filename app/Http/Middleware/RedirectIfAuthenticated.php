@@ -21,11 +21,21 @@ class RedirectIfAuthenticated
     {
         $guards = empty($guards) ? [null] : $guards;
 
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+
+        if (Auth::check()) {
+            $user = Auth::user();
+            if ($user->role_id == 1) {
+                return redirect()->route('admin.loker.index');
+            }elseif ($user->role_id == 2) {
+                return redirect()->route('frontend.index');
             }
         }
+
+        // foreach ($guards as $guard) {
+        //     if (Auth::guard($guard)->check()) {
+        //         return redirect(RouteServiceProvider::HOME);
+        //     }
+        // }
 
         return $next($request);
     }
